@@ -1,0 +1,77 @@
+{
+  "name": "mern-stack",
+  "version": "1.0.0",
+  "description": "Started template for MERN Stack",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node build",
+    "dev": "cross-env NODE_ENV=development run-p dev:*",
+    "dev:client": "webpack-dev-server --open --config webpack.dev.js",
+    "dev:server": "run-s clean serve",
+    "serve": "nodemon src/server --exec babel-node",
+    "build": "cross-env NODE_ENV=production run-s clean build:*",
+    "build:server": "run-s compile",
+    "build:client": "webpack --config webpack.prod.js",
+    "compile": "babel src/server -d build",
+    "clean": "rimraf build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdeteamevents/mern-stack.git"
+  },
+  "keywords": [
+    "mern",
+    "stack",
+    "react",
+    "reactjs",
+    "nodejs",
+    "expressjs",
+    "mongodb"
+  ],
+  "author": "Sasidhar Kola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdeteamevents/mern-stack/issues"
+  },
+  "homepage": "https://github.com/cdeteamevents/mern-stack#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.2",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nodemon": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "style-loader": "^1.1.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2",
+    "webpackbar": "^4.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "reactstrap": "^8.4.1"
+  }
+}
