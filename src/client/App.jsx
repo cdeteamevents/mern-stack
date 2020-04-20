@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import { BASE_URL } from './config/api';
 
 const App = () => {
   useEffect(() => {
-    fetch(`${BASE_URL}/users`)
+    fetch('/api/users')
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => console.error(err));

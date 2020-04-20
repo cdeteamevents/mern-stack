@@ -9,6 +9,9 @@ module.exports = merge(common, {
     contentBase: path.resolve(__dirname, 'build', 'public'),
     publicPath: '/',
     historyApiFallback: true,
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
   },
   plugins: [],
 });
